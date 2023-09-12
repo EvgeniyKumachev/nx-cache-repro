@@ -45,7 +45,7 @@
     "includedScripts": []
   },
   "dependencies": {
-    "@nx-cache-repro/nx-fs-cache": "^0.0.2",
+    "@nx-cache-repro/nx-fs-cache": "latest",
     "@nx/devkit": "^16.8.1",
     "@sentry/nextjs": "^7.68.0",
     "file-system-cache": "^2.4.4",
