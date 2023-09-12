@@ -1,0 +1,11 @@
+{
+  "name": "@nx-cache-repro/nx-fs-cache",
+  "version": "0.0.1",
+  "dependencies": {
+    "tslib": "^2.3.0",
+    "nx-remotecache-custom": "latest"
+  },
+  "type": "commonjs",
+  "main": "./src/index.js",
+  "typings": "./src/index.d.ts"
+}

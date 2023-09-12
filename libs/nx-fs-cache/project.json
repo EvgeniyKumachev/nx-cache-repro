@@ -1,0 +1,33 @@
+{
+  "name": "nx-fs-cache",
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "libs/nx-fs-cache/src",
+  "projectType": "library",
+  "targets": {
+    "build": {
+      "executor": "@nx/js:tsc",
+      "outputs": ["{options.outputPath}"],
+      "options": {
+        "outputPath": "dist/libs/nx-fs-cache",
+        "main": "libs/nx-fs-cache/src/index.ts",
+        "tsConfig": "libs/nx-fs-cache/tsconfig.lib.json",
+        "assets": ["libs/nx-fs-cache/*.md"]
+      }
+    },
+    "publish": {
+      "command": "node tools/scripts/publish.mjs nx-fs-cache {args.ver} {args.tag}",
+      "dependsOn": ["build"]
+    },
+    "lint": {
+      "executor": "@nx/linter:eslint",
+      "outputs": ["{options.outputFile}"],
+      "options": {
+        "lintFilePatterns": [
+          "libs/nx-fs-cache/**/*.ts",
+          "libs/nx-fs-cache/package.json"
+        ]
+      }
+    }
+  },
+  "tags": []
+}
